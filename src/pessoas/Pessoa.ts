@@ -1,7 +1,4 @@
-import { Conta } from "../contas/conta";
 
- 
- 
  export abstract class Pessoa {
     private cpf: string;
     private nome: string;
@@ -13,5 +10,8 @@ constructor(cpf: string,  nome: string, telefone: string){
     this.telefone = telefone;
 }
 
+ public getNome(): string{
+    return this.nome
+ }
 
 }

@@ -10,12 +10,15 @@ export abstract class Conta {
     this.numero = numero;
   }
 
-  depositar(valor: number): void {
+  public depositar(valor: number): void {
+    if (valor <= 0) {
+      throw new Error("O valor do depósito deve ser maior que zero.");
+    }
     const creditado = new Credito(valor, new Date());
     this.creditos.push(creditado);
   }
 
-  sacar(valor: number): void {
+  public sacar(valor: number): void {
     if(valor <= 0){
         throw new Error('Valor do saque deve ser maior que zero');
     }
@@ -29,7 +32,7 @@ export abstract class Conta {
   }
 
 
-  abstract calcularSaldo(): number
+  abstract calcularSaldo(): number;
     
   
 }

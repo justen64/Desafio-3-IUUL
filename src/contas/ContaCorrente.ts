@@ -1,6 +1,6 @@
 import { Conta } from "./conta";
 
-class ContaCorrente extends Conta {
+export class ContaCorrente extends Conta {
   limite: number = 0;
 
   constructor(numero: string, limite: number) {
@@ -8,7 +8,7 @@ class ContaCorrente extends Conta {
     this.limite = limite;
   }
 
-  transferir(contaDestino: Conta, valor: number): void {
+  public transferir(contaDestino: Conta, valor: number): void {
     if (valor <= 0) {
       throw new Error("Valor inválido");
     }
@@ -22,7 +22,7 @@ class ContaCorrente extends Conta {
     contaDestino.depositar(valor);
   }
 
-  calcularSaldo(): number {
+  public calcularSaldo(): number {
     const totalCreditos = this.creditos.reduce(
       (total, credito) => total + credito.valor,
       0
