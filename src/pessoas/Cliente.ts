@@ -1,6 +1,6 @@
 import { Conta } from '../contas/conta';
+import { Endereco } from './Endereco';
 import {IUsuario} from './IUsuario';
-import { Endereco } from './endereco';
 import { Pessoa } from './pessoa';
 
 

@@ -1,7 +1,8 @@
 import { Cliente } from "../pessoas/cliente";
-import { Endereco } from "../pessoas/endereco";
+import { Endereco } from "../pessoas/Endereco";
 
-const cliente1 = new Cliente('456.789.123-00', 'Mariana', '99988-9999', false, []);
+
+const cliente1 = new Cliente('456.789.123-00', 'Mariana', '99988-9999', true, []);
 const cliente2 = new Cliente('789.123.456-00', 'José', '88888-8888', true, []);
 
 cliente1.adicionarEndereco(new Endereco('12345-678', 'Rua A', '100', 'Apto 1', 'São Paulo', 'SP'));
